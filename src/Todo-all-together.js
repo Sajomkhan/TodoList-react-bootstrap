@@ -166,5 +166,4 @@ function TodoAllTogether() {
     </div>
   );
 }
-
 export default TodoAllTogether;
