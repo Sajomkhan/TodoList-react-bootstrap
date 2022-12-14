@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleCheck,
-  faPenToSquare,
-  faTrashCan,
-} from "@fortawesome/free-regular-svg-icons";
+import { faCircleCheck, faPenToSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
 import "./App.css";
 
 function TodoAllTogether() {
   const [toDo, setToDo] = useState([
-    { id: 2, title: "task 2", status: false },
-    { id: 1, title: "task 1", status: false },
+    { id: 2, title: "Task 2", status: false },
+    { id: 1, title: "Task 1", status: false },
   ]);
 
   const [newTask, setNewTask] = useState("");
@@ -30,8 +26,8 @@ function TodoAllTogether() {
 
   //Delete Task
   const deleteTask = (id) => {
-    let newTask = toDo.filter((task) => task.id !== id);
-    setToDo(newTask);
+    let taskForDelate = toDo.filter((task) => task.id !== id);
+    setToDo(taskForDelate);
   };
 
   //Mark Done
@@ -73,9 +69,10 @@ function TodoAllTogether() {
       <br /> <br />
       <h1>To Do List App (ReactJS)</h1>
       <br /> <br />
+
+      {/*Update Task */}
       {updateData && updateData ? (
-        <>
-          {/*Update Task */}
+        <>          
           <div className="row">
             <div className="col">
               <input
@@ -90,8 +87,9 @@ function TodoAllTogether() {
                 className="btn btn-lg btn-success mr-20">
                 Update
               </button> 
-              <button onClick={cancelUpdate} 
-              className="btn btn-lg btn-warning">
+              <button 
+                onClick={cancelUpdate} 
+                className="btn btn-lg btn-warning">
                 Cancle
               </button>
             </div>
@@ -110,7 +108,9 @@ function TodoAllTogether() {
               />
             </div>
             <div className="col-auto">
-              <button onClick={addTask} className="btn btn-lg btn-success">
+              <button 
+                onClick={addTask} 
+                className="btn btn-lg btn-success">
                 Add
               </button>
             </div>
@@ -153,7 +153,9 @@ function TodoAllTogether() {
                       </span>
                     )}
                     {/* Delete Task */}
-                      <span title="Delete" onClick={(e) => deleteTask(task.id)}>
+                      <span 
+                        title="Delete" 
+                        onClick={(e) => deleteTask(task.id)}>
                         <FontAwesomeIcon icon={faTrashCan} />
                       </span>
                   </div>
