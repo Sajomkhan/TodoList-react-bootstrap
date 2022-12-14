@@ -122,7 +122,7 @@ function TodoAllTogether() {
       {toDo && toDo.length ? "" : "No Task"}
       {toDo &&
         toDo
-          .sort((a, b) => (a.id > b.id ? 1 : -1))
+          .sort((a, b) => (a.id > b.id ? 1 : -1)) //Sorting as per id
           .map((task, index) => {
             return (
               <React.Fragment key={task.id}>
@@ -166,4 +166,5 @@ function TodoAllTogether() {
     </div>
   );
 }
+
 export default TodoAllTogether;
