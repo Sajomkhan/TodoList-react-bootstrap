@@ -7,9 +7,9 @@ import {
   faTrashCan,
 } from "@fortawesome/free-regular-svg-icons";
 
-import "./ToDo.css";
+import "./App.css";
 
-function AppAll() {
+function TodoAllTogether() {
   const [toDo, setToDo] = useState([
     { id: 2, title: "task 2", status: false },
     { id: 1, title: "task 1", status: false },
@@ -165,4 +165,4 @@ function AppAll() {
   );
 }
 
-export default AppAll;
+export default TodoAllTogether;
