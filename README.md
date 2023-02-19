@@ -1,4 +1,4 @@
-# A Notes App with React-TypeScript-Bootstrap
+# Todo App with React-Bootstrap
 <!-- ### It's a Full Mobile Responsive App -->
 
 <!-- ### Go to Live Project: https://food-shop-app-react-tailwined.netlify.app/ -->
@@ -9,13 +9,12 @@
 
 ### What I use here:
 * React
-* TypeScript
 * Bootstrap
 
-#### To start a new Create React App project with TypeScript, you can run:
+#### To start a new Create React App project, you can run:
 
-    npx create-react-app my-app --template typescript
-    yarn create react-app my-app --template typescript
+    npx create-react-app my-app
+    yarn create react-app my-app
 
 #### To install React-Bootstrap:
 
