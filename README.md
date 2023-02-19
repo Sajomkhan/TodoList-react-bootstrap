@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# A Notes App with React-TypeScript-Bootstrap
+<!-- ### It's a Full Mobile Responsive App -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ### Go to Live Project: https://food-shop-app-react-tailwined.netlify.app/ -->
+<!-- [![image](screenshot.JPG)](https://food-shop-app-react-tailwined.netlify.app/) -->
 
-## Available Scripts
+![Screenshot](/public/ScreenShot.JPG)
 
-In the project directory, you can run:
 
-### `npm start`
+### What I use here:
+* React
+* TypeScript
+* Bootstrap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### To start a new Create React App project with TypeScript, you can run:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    npx create-react-app my-app --template typescript
+    yarn create react-app my-app --template typescript
 
-### `npm test`
+#### To install React-Bootstrap:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm install react-bootstrap bootstrap
+    
+#### Then following line can be included in your src/index.js or App.js file
 
-### `npm run build`
+    import 'bootstrap/dist/css/bootstrap.min.css';
+ 
+#####  Or, If you want to use CDN to avoied installation...
+#### Placing CDN in 'public > index.html' folder for include the latest styles Bootstrap CDN:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous"
+    />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### In case of TypeScript if you feel problem bootstrap runtime pls add below code in "react-app-env.d.ts" folder:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### In <react-app-env.d.ts> folder type:
+        declare module "react/jsx-runtime" {
+            export default any;
+        }
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
